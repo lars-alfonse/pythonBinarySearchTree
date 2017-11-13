@@ -15,7 +15,7 @@ class SearchTree:
         if self.root is None:
             return False
         else:
-            self.root.check_value(data)
+            return self.root.check_value(data)
 
     def display(self):
         if not self.root is None:

@@ -25,9 +25,9 @@ class node:
     def check_value(self, data):
         if self.data == data:
             return True
-        elif data > self.data and not self.right_child:
+        elif data > self.data and self.right_child is not None:
             return self.right_child.check_value(data)
-        elif data < self.data and not  self.left_child:
+        elif data < self.data and self.left_child is not None:
             return self.left_child.check_value(data)
         else:
             return False
